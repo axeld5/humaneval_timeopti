@@ -22,9 +22,7 @@ def get_cells(answer):
 
 def create_notebook(problem, first_answer, modified_answer, save_path):
     nb = nbf.v4.new_notebook()
-    print(problem["prompt"])
     problem = problem["prompt"]
-    print("passed!")
     cells = [nbf.v4.new_code_cell(problem)]
     cells += get_cells(first_answer)
     cells += get_cells(modified_answer)
